@@ -6,7 +6,16 @@ export default {
         "./resources/**/*.vue",
     ],
     theme: {
-        extend: {},
+        extend: {
+            fontFamily: {
+                sans: [
+                    "Bricolage Grotesque Variable",
+                    "Inter Variable",
+                    "Inter",
+                    ...defaultTheme.fontFamily.sans,
+                ],
+            },
+        },
     },
-    plugins: [],
+    plugins: [require("@tailwindcss/typography")],
 };
